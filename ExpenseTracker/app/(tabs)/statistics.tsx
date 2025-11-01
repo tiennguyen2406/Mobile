@@ -24,7 +24,7 @@ export default function StatisticsScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      {/* (Câu 9) Phần UI Đồng bộ */}
+      
       <View style={styles.syncContainer}>
         <Text style={styles.sectionTitle}>Câu 9: Đồng bộ API</Text>
         <TextInput
@@ -45,10 +45,10 @@ export default function StatisticsScreen() {
       </View>
 
       {/* (Câu 12) Phần Biểu đồ (sẽ làm ở bước sau) */}
-      <View style={styles.chartContainer}>
+      {/* <View style={styles.chartContainer}>
         <Text style={styles.sectionTitle}>Câu 12: Biểu đồ Thống kê</Text>
         <Text style={styles.placeholderText}>Biểu đồ sẽ hiển thị ở đây...</Text>
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 }
