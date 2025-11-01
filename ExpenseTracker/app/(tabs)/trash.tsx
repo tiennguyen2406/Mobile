@@ -39,10 +39,12 @@ export default function TrashScreen() {
     }, [loadDeletedExpenses])
   );
 
+  //Hàm Khôi phục lại:
+
   const handleRestorePress = (id: number) => {
     Alert.alert(
-      'Khôi phục Khoản chi',
-      'Bạn có muốn khôi phục khoản chi này không?',
+      'Khôi phục',
+      'Khôi phục khoản chi này',
       [
         { text: 'Hủy', style: 'cancel' },
         {
@@ -51,9 +53,9 @@ export default function TrashScreen() {
           onPress: async () => {
             try {
               await restoreExpense(id);
-              await loadDeletedExpenses(); // Tải lại danh sách đã xóa
+              await loadDeletedExpenses();
             } catch (error) {
-              console.error('Lỗi khi khôi phục:', error);
+              console.error('Lỗi', error);
             }
           },
         },
